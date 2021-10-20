@@ -1,0 +1,17 @@
+<!-- Modal Example -->
+<template>
+    <div class="slds-m-bottom_small slds-page-header">
+        <div style="display: none">
+            <p>This is the hacky way of getting rendered callback to work,
+                this has to be in the page, even if not shown. Record Id: {recordId}</p>
+        </div>
+
+        <template if:true={completedLoading}>
+            <div>
+                <p>Name: {accountRecord.Name}</p>
+                <lightning-button class="slds-theme_brand" icon-position="right" variant="brand" type="button"
+                                  label="Randomize the Name!" onclick={onSaveClick}></lightning-button>
+            </div>
+        </template>
+    </div>
+</template>
